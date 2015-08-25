@@ -33,7 +33,7 @@ function isDeviceReady() {
     return true;
 }
 function getlink(){
-    function loadData() {
+   
     od = "";
     $.get("http://159.224.220.250/BCS/link.php", od, function (result) {
         //alert( "success" );
@@ -48,7 +48,7 @@ function getlink(){
 
 
     }, "json");
-}
+
 }
 
 function exitFromApp()
