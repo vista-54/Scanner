@@ -21,7 +21,7 @@ var isIos = (/iPhone|iPad|iPod/i.test(navigator.userAgent)) ? true : false;
 if (isMobile) {
     document.write('<script charset="utf-8" src="cordova.js" ><\/script>');
 }
-getlink();
+//getlink();
 
 //document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -750,4 +750,5 @@ function setting(){
       
 clearUrl = prompt('Enter url', 'https://surestock.ese-co.com/vmi/');
  store.setItem("url", clearUrl);
+ reload();
 }
