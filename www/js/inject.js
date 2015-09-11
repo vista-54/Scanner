@@ -22,12 +22,12 @@ function onFrameReady() {
 //            parentContainer.innerHTML = containerNode.innerHTML + '<button class="ScanButton" id="scan" type="button" onclick="openParentScan();return false">Scan</button><button onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')">Send</button>';
 //            parentContainer.innerHTML = inputHtml +  '<td><button   type="button" onclick="openParentScan();return false " style="font-size: 12px; padding: 0px 5px 0 4px;"><span class="dx-vam">Scan</span></button></td> <td><button id="scan" onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')" style="font-size: 12px; padding: 0px 5px 0 4px;><span class="dx-vam">Send</span></button></td>';
          //  if(identificator==true){
-          //  parentContainer.innerHTML = inputHtml + '<td> <div class="dxbButton dxbButtonSys dxbTSys" id="scan" style="-khtml-user-select:none;"><div class="dxb"><div class="dxb-hbc"><input class="dxb-hb" value="Scan" type="button"  ></div><span class="dx-vam" onclick="openParentScan()">Scan</span></div></div></td>';
+          parentContainer.innerHTML = inputHtml + '<td> <div class="dxbButton dxbButtonSys dxbTSys" id="scan" style="-khtml-user-select:none;"><div class="dxb"><div class="dxb-hbc"><input class="dxb-hb" value="Scan" type="button"  ></div><span class="dx-vam" onclick="openParentScan()">Scan</span></div></div></td>';
 //<td><button onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')">Send</button></td>';
         //<td><div class="dxbButton dxbButtonSys dxbTSys" id="send" style="-khtml-user-select:none;"><div class="dxb"><div class="dxb-hbc"><input class="dxb-hb" value="Send" type="button"  ></div><span class="dx-vam" onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')">Send</span></div></div></td>'
          //   }
         //else{
-             parentContainer.innerHTML = inputHtml + '<td><div class="dxbButton dxbButtonSys dxbTSys" id="send" style="-khtml-user-select:none;"><div class="dxb"><div class="dxb-hbc"><input class="dxb-hb" value="Send" type="button"  ></div><span class="dx-vam" onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')">Send</span></div></div></td>';
+            // parentContainer.innerHTML = inputHtml + '<td><div class="dxbButton dxbButtonSys dxbTSys" id="send" style="-khtml-user-select:none;"><div class="dxb"><div class="dxb-hbc"><input class="dxb-hb" value="Send" type="button"  ></div><span class="dx-vam" onclick="aspxEValueChanged(\'ContentPlaceHolder1_gvProductList_DXSE\')">Send</span></div></div></td>';
       //  }
     }
     }, 2000);
