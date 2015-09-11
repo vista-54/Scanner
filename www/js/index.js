@@ -748,6 +748,6 @@ function getDeviceInfo(){
 }
 function setting(){
       
-clearUrl = prompt('Enter url', '');
+clearUrl = prompt('Enter url', 'https://surestock.ese-co.com/vmi/');
  store.setItem("url", clearUrl);
 }
