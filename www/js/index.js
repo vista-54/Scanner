@@ -5,9 +5,9 @@ var store = window.localStorage;
 var jsFileText = '';
 var localjsLoaded = false;
 var deviceIsReady = false;
-var identificator=true;
- var deviceModel;
- var clearUrl = store.getItem("url");;
+var identificator = true;
+var deviceModel;
+var clearUrl = store.getItem("url");
 //    var deviceModel='';
 //    var deviceOs='';
 //    var deviceOsVersion='';
@@ -34,24 +34,24 @@ function isDeviceReady() {
     //getlink();
     return true;
 }/*
-function getlink(){
-   
-    od = "";
-    $.get("http://159.224.220.250/BCS/link.php", od, function (result) {
-        //alert( "success" );
-        console.log(result);
-        //clearUrl=result.data;
-        for (var i in result)
-        {
-            var obj = result.data[i];
-            var page = "<p><img src=" + url + obj.img + "></p><h1>" + obj.title + "</h1><p>" + obj.desc + "</p><p>" + obj.massa + "/" + obj.price + "   <button onclick=\"buy()\">В корзину</button></p>";
-            $("#cont").append(page);
-        }
-
-
-    }, "json");
-
-}*/
+ function getlink(){
+ 
+ od = "";
+ $.get("http://159.224.220.250/BCS/link.php", od, function (result) {
+ //alert( "success" );
+ console.log(result);
+ //clearUrl=result.data;
+ for (var i in result)
+ {
+ var obj = result.data[i];
+ var page = "<p><img src=" + url + obj.img + "></p><h1>" + obj.title + "</h1><p>" + obj.desc + "</p><p>" + obj.massa + "/" + obj.price + "   <button onclick=\"buy()\">В корзину</button></p>";
+ $("#cont").append(page);
+ }
+ 
+ 
+ }, "json");
+ 
+ }*/
 
 function exitFromApp()
 {
@@ -168,12 +168,12 @@ if (isMobile) {
 //
 //}
 function onDeviceReady() {
-if(isMobile) {
-   StatusBar.overlaysWebView(false);
-}
+    if (isMobile) {
+        StatusBar.overlaysWebView(false);
+    }
     console.log('device ready');
     getDeviceInfo();
-   // getDeviceInfo();
+    // getDeviceInfo();
     init();
 
 
@@ -294,11 +294,11 @@ function createIframe() {
                 'onerror="onError()" ' +
                 'scrolling="yes" ' +
                 'wmode="Opaque" ' +
-                'noresize="noresize" '+
+                'noresize="noresize" ' +
                 '  </iframe>';
-        
+
         frameHolder.innerHTML = frameHtml;
-       
+
         frameCreated = true;
 
 //    var iframe = document.getElementById('main-frame'),
@@ -321,7 +321,7 @@ function createIframe() {
 
     }, 1500);
 
- 
+
 
 
 }
@@ -329,7 +329,7 @@ function createIframe() {
 
 
 function checkForLoad() {
-    
+
 //<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     clearTimeout(loadTimeout);
     console.log('page is loaded. try to detect type of page');
@@ -389,8 +389,8 @@ function checkForLoad() {
 
 }
 
-function jqueryLoadedOnFrame(){
-    
+function jqueryLoadedOnFrame() {
+
 }
 
 
@@ -661,24 +661,24 @@ function toolAction(action) {
     }
 }
 function loadJs() {
-  //  getDeviceInfo();\
-  
-    if((deviceModel=='iPad1')||(deviceModel=='iPad2')){
+    //  getDeviceInfo();\
+
+    if ((deviceModel == 'iPad1') || (deviceModel == 'iPad2')) {
         console.log("device not have a camera");
-       identificator=false;
+        identificator = false;
     }
-    else{
-    var request = new XMLHttpRequest();
-    request.open("GET", "js/inject.js");
-    request.onreadystatechange = function () {
-        //   Call a function when the state changes.
-        if (request.readyState === 4) {
-            jsFileText = request.responseText;
-            localjsLoaded = true;
-            console.log("loadJSsucsess");
-        }
-    };
-    request.send();
+    else {
+        var request = new XMLHttpRequest();
+        request.open("GET", "js/inject.js");
+        request.onreadystatechange = function () {
+            //   Call a function when the state changes.
+            if (request.readyState === 4) {
+                jsFileText = request.responseText;
+                localjsLoaded = true;
+                console.log("loadJSsucsess");
+            }
+        };
+        request.send();
     }
 }
 if (isMobile) {
@@ -738,17 +738,19 @@ function initRotation() {
 function doOnOrientationChange() {
     redrawFrameBounds();
 }
-function getDeviceInfo(){
+function getDeviceInfo() {
     console.log("Info loaded");
-     deviceModel=device.model;
-     deviceOs=device.platform;
-     deviceOsVersion=device.version;
-       loadJs();
-   // alert("Model"+devicModel+"Os"+deviceOs+"VersionOS"+deviceOsVersion);
+    deviceModel = device.model;
+    deviceOs = device.platform;
+    deviceOsVersion = device.version;
+    loadJs();
+    // alert("Model"+devicModel+"Os"+deviceOs+"VersionOS"+deviceOsVersion);
 }
-function setting(){
-var url= "https://test.ese-co.com/vmi/";     
-clearUrl = prompt('Enter url', url);
- store.setItem("url", url);
- reload();
+function setting() {
+    if (clearUrl === '') {
+        clearUrl = "https://test.ese-co.com/vmi/";
+    }
+    clearUrl = prompt('Enter url', clearUrl);
+    store.setItem("url", clearUrl);
+    reload();
 }
