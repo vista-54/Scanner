@@ -747,8 +747,8 @@ function getDeviceInfo(){
    // alert("Model"+devicModel+"Os"+deviceOs+"VersionOS"+deviceOsVersion);
 }
 function setting(){
-      
-clearUrl = prompt('Enter url', 'https://surestock.ese-co.com/vmi/');
- store.setItem("url", clearUrl);
+var url= "https://test.ese-co.com/vmi/";     
+clearUrl = prompt('Enter url', url);
+ store.setItem("url", url);
  reload();
 }
