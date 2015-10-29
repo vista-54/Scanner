@@ -148,7 +148,7 @@ var frameCreated = false;
 
 
 //var clearUrl = "https://test.ese-co.com/surestock";
-var url = clearUrl;
+
 //var url = "http://192.168.166.1/?mobile-app=1";
 
 //+ "?mobile-app=1&wmode=transparent"
@@ -285,9 +285,9 @@ function createIframe() {
     bodyWidth = document.body.offsetWidth;
 
     setTimeout(function () {
-
+//        var url = clearUrl;
         console.log('create iframe in timeout');
-        var frameHtml = '<iframe id="main-frame" src="' + url + '" ' +
+        var frameHtml = '<iframe id="main-frame" src="' + clearUrl + '" ' +
 //                'height="' + bodyHeight + '" ' +
                 'name="main-frame" class="main-frame " ' +
                 'onload="checkForLoad()" ' +
@@ -461,7 +461,7 @@ function reload() {
     init();
     var frame = document.getElementById('main-frame');
     if (frame) {
-        frame.src = url;
+        frame.src = clearUrl;
     }
 
 }
@@ -469,21 +469,21 @@ function reload() {
 
 
 
-function openDocument(url) {
+function openDocument(clearUrl) {
     if (isMobile) {
-        openSiteInDefaultBrowser(url);
+        openSiteInDefaultBrowser(clearUrl);
     } else {
-        window.open(url, '_blank');
+        window.open(clearUrl, '_blank');
     }
 }
 
 
-function openSiteInDefaultBrowser(url) {
-    console.log('open external url: ' + url);
+function openSiteInDefaultBrowser(clearUrl) {
+    console.log('open external clearUrl: ' + clearUrl);
     if (isIos) {
-        window.open(url, '_system');
+        window.open(clearUrl, '_system');
     } else {
-        navigator.app.loadUrl(url, {openExternal: true});
+        navigator.app.loadUrl(clearUrl, {openExternal: true});
     }
     return false;
 }
