@@ -367,6 +367,9 @@ function checkForLoad() {
     var header = frameDocument.getElementById('header');
     if (!header /*|| !contentNormal*/) {
         alert("Refused to display");
+        clearUrl = prompt('Refused to display. Please, rewrite new url', clearUrl);
+        store.setItem("url", clearUrl);
+        reload();
         console.log('page not loaded, showed std browser 404 page');
 //        showSplash('page is unavailable');
 //        hideLoader();
