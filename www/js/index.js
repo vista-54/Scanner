@@ -366,6 +366,7 @@ function checkForLoad() {
 
     var header = frameDocument.getElementById('header');
     if (!header /*|| !contentNormal*/) {
+        alert("Refused to display");
         console.log('page not loaded, showed std browser 404 page');
 //        showSplash('page is unavailable');
 //        hideLoader();
