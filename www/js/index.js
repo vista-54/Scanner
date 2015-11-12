@@ -287,7 +287,7 @@ function createIframe() {
     setTimeout(function () {
 //        var url = clearUrl;
         console.log('create iframe in timeout');
-        var frameHtml = '<iframe id="main-frame" src="' + clearUrl+ '" ' +
+        var frameHtml = '<iframe id="main-frame" src="' + clearUrl + '" ' +
 //                'height="' + bodyHeight + '" ' +
                 'name="main-frame" class="main-frame " ' +
                 'onload="checkForLoad()" ' +
@@ -296,7 +296,7 @@ function createIframe() {
                 'wmode="Opaque" ' +
                 'noresize="noresize" ' +
                 '  </iframe>';
-//        window.location.replace(clearUrl);
+
         frameHolder.innerHTML = frameHtml;
 
         frameCreated = true;
