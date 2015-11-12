@@ -366,7 +366,7 @@ function checkForLoad() {
 
     var header = frameDocument.getElementById('header');
     if (!header /*|| !contentNormal*/) {
-        alert("Refused to display");
+//        alert("Refused to display");
         clearUrl = prompt('Refused to display. Please, rewrite new url', clearUrl);
         store.setItem("url", clearUrl);
         reload();
