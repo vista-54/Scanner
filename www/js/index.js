@@ -28,8 +28,8 @@ if (isMobile) {
 function isDeviceReady() {
 
     if (deviceIsReady === false) {
-        showErrorMessage('device not ready');
-        log('device not ready');
+        console.log('device not ready');
+        //log('device not ready');
         return false;
     }
     //getlink();
@@ -173,9 +173,9 @@ function onDeviceReady() {
         StatusBar.overlaysWebView(false);
     }
     clearUrl = store.getItem("url");
-    if (clearUrl === null) {
+    if (clearUrl === null || clearUrl === 'null') {
         clearUrl = "https://test.ese-co.com/vmi/";
-        store.setItem("url",clearUrl);
+        store.setItem("url", clearUrl);
     }
     console.log('device ready');
     getDeviceInfo();
