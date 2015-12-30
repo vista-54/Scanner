@@ -26,6 +26,10 @@ if (isMobile) {
 //document.addEventListener("deviceready", onDeviceReady, false);
 
 function isDeviceReady() {
+    clearUrl = store.getItem("url");
+    if (clearUrl === '') {
+        clearUrl = "https://test.ese-co.com/vmi/";
+    }
     if (deviceIsReady === false) {
         showErrorMessage('device not ready');
         log('device not ready');
