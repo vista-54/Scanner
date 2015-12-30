@@ -173,8 +173,9 @@ function onDeviceReady() {
         StatusBar.overlaysWebView(false);
     }
     clearUrl = store.getItem("url");
-    if (clearUrl === 'null') {
+    if (clearUrl === null) {
         clearUrl = "https://test.ese-co.com/vmi/";
+        store.setItem("url",clearUrl);
     }
     console.log('device ready');
     getDeviceInfo();
