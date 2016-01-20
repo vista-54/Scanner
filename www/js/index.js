@@ -174,7 +174,7 @@ function onDeviceReady() {
     }
     clearUrl = store.getItem("url");
     if (clearUrl === null || clearUrl === 'null') {
-        clearUrl = "https://test.ese-co.com/vmi/";
+        clearUrl = "https://surestock.ese-co.com/vmi";
         store.setItem("url", clearUrl);
     }
     console.log('device ready');
